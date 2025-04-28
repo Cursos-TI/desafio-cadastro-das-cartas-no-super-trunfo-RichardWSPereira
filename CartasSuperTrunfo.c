@@ -1,29 +1,21 @@
-#include <stdio.h>
-
-
-
 int main() {
-   
+    
+
+    
+    // Definação das variáveis separadas para cada atributo da cidade.
+    
+    char estadoA, estadoB;
+    char codigoA[3], codigoB[3];
+    char nomedacidadeA[30], nomedacidadeB[30];
+    int populacaoA, pontosturisticoA, populacaoB, pontosturisticoB;
+    float areaA, pibA, areaB, pibB;
+
+    // Cadastro das Cartas:  
+    
     printf("Desafio Super Trunfo - Países \n");
     printf("Tema 1 - Cadastro das Cartas \n");
     printf("Teste Richard \n");
     printf("                               \n");
-    
-    // Definação das variáveis separadas para cada atributo da cidade.
-    
-    char estadoA;
-    char codigoA[3];
-    char nomedacidadeA[30];
-    int populacaoA, pontosturisticoA;
-    float areaA, pibA;
-
-    char estadoB;
-    char codigoB[3];
-    char nomedacidadeB[30];
-    int populacaoB, pontosturisticoB;
-    float areaB, pibB;
-
-    // Cadastro das Cartas:    
 
     printf("Qual é a letra que representa este estado: ");
     scanf("%c",&estadoA);
@@ -41,6 +33,8 @@ int main() {
     scanf("%d", &pontosturisticoA);
     
     printf("------------------------------\n");
+    printf("Novo cadastro:\n");
+    
 
     printf("Qual é a letra que representa este novo estado: ");
     scanf("%s",&estadoB);
@@ -79,6 +73,7 @@ int main() {
     printf("Área: %.1f km2 \n", areaB);
     printf("PIB: %.1f bilhões de reais \n", pibB);
     printf("Número de Pontos Turísticos: %d \n", pontosturisticoB);
+    printf("------------------------------\n");
     
 
     return 0;
