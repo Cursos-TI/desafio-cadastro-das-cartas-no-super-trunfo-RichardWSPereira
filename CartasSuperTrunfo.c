@@ -32,9 +32,9 @@ int main() {
     printf("Qual é a quantidade de Pontos Turísticos: ");
     scanf("%d", &pontosturisticoA);
     
-    printf("------------------------------\n");
-    printf("Novo cadastro:\n");
-    
+    printf("                               \n");
+    printf("--------- Novo cadastro --------\n");
+    printf("                               \n");
 
     printf("Qual é a letra que representa este novo estado: ");
     scanf("%s",&estadoB);
