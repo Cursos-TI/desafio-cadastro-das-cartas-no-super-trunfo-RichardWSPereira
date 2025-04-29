@@ -1,3 +1,6 @@
+#include <stdio.h>
+
+
 int main() {
     
 
@@ -6,9 +9,17 @@ int main() {
     // Estado, codigo, nome da cidade serão representados por letras, logo, serão caracteres, assim digita com "char" na frente do nome da variável.
     // Diferentemente, o nome da cidade e codigo terão mais de um caractere, assim, é especificado entre colchetes a quantidade de caracteres.
 
-    char estadoA, estadoB;
-    char codigoA[3], codigoB[3];
-    char nomedacidadeA[30], nomedacidadeB[30];
+    char estadoA;
+    char codigoA[3];
+    char nomedacidadeA[30];
+    int populacaoA, pontosturisticoA;
+    float areaA, pibA;
+
+    char estadoB;
+    char codigoB[3];
+    char nomedacidadeB[30];
+    int populacaoB, pontosturisticoB;
+    float areaB, pibB;
 
     // Na população é digitado um número inteiro, logo, colocamos o "int" para atribuir a variável este atributo, depois colocamos os nomes das variável separadas com vírgula
     int populacaoA, pontosturisticoA, populacaoB, pontosturisticoB;
@@ -64,9 +75,11 @@ int main() {
     printf("Qual é a quantidade de Pontos Turísticos: ");
     scanf("%d", &pontosturisticoB);
     printf("------------------------------\n");
+    printf("                               \n");
 
-    // Exibição dos Dados das Cartas:
-    
+    printf("Exibição dos Dados das Cartas: \n");
+    printf("                               \n");
+
     printf("Carta 1: \n");
     printf("Estado: %c \n",estadoA);
     printf("Código: %s \n", codigoA);
