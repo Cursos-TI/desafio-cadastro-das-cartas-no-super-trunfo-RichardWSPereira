@@ -13,7 +13,12 @@ int main() {
     
     char estB, estadoA, codeB[3], codigoA[3], nomedacidadeB[30], nomedacidadeA[30];   
     int populacaoA, pontosturisticoA, populacaoB, pontosturisticoB;  
-    float areaA, pibA, areaB, pibB; 
+    float areaA, pibA, areaB, pibB;
+
+    // Criarei as variáveis de Densidade Populacional e PIB per capita, sendo estas variáveis do tipo float
+    
+    float densidadepopA, PIBpercapitaA;
+    float densidadepopB, PIBpercapitaB;
 
     printf("Desafio Super Trunfo - Países \n");
     printf("Tema 1 - Cadastro das Cartas \n");
@@ -43,6 +48,14 @@ int main() {
     scanf("%d", &pontosturisticoA);
     printf("                               \n");
 
+    // Para encontrar o resultado da Densidade populacional devo dividir a população da cidade pela sua área 
+    // Como também, devo dividir o PIB da cidade pela população para encontrar o PIB per capita
+    // Esta conta sendo feito já dentro da atribuição das variáveis criadas para Densidade populacional e PIB per capita
+    // Para que não haja problema com conversão de inteiros para float, vou explicitamente atribuir como float
+
+    densidadepopA = (float) populacaoA / areaA;
+    PIBpercapitaA = pibA / (float) populacaoA;
+
     // Exibição dos Dados da Carta 1:
 
     printf("* Carta 1 *\n");
@@ -53,6 +66,8 @@ int main() {
     printf("Área: %.1f km2 \n", areaA);
     printf("PIB: %.1f bilhões de reais \n", pibA);
     printf("Número de Pontos Turísticos: %d \n", pontosturisticoA);
+    printf("Densidade Populacional: %.2f hab/km² \n", densidadepopA);
+    printf("PIB per Capita: %.2f reais \n", PIBpercapitaA);
 
     printf("                               \n");
     printf("--------- Novo cadastro --------\n");
@@ -61,7 +76,7 @@ int main() {
     // Foi utilizado o /n para pular a linha na execução do próximo código, assim como foi usado o printf com sucessivos espaços ṕara haver uma linha em branco entre os dizeres na tela
     // Podemos atribuir quantas casas decimais queremos nos pontos flutuantes, basta coloca o ponto e o numero exemplo o que foi colocado no codigo em área e PIB: %.1f
 
-    printf("Qual é a letra que representa este novo estado: ");
+    printf("Qual é a letra que representa este novo estado: "); 
     scanf("%s",&estB);
     printf("Qual é o código da cidade do estado %c: ",estB);
     scanf("%s",&codeB);
@@ -77,6 +92,11 @@ int main() {
     scanf("%d", &pontosturisticoB);
     printf("                               \n");
 
+    // Mesmo processo para descubrir a densidade populacional e PIB per capita da cidade 1 será feito nesta
+
+    densidadepopB = (float) populacaoB / areaB;
+    PIBpercapitaB = pibB / (float) populacaoB;
+
     printf("* Carta 2 *\n");
     printf("Estado: %c \n", estB);
     printf("Código: %s \n", codeB);
@@ -85,6 +105,8 @@ int main() {
     printf("Área: %.1f km2 \n", areaB);
     printf("PIB: %.1f bilhões de reais \n", pibB);
     printf("Número de Pontos Turísticos: %d \n", pontosturisticoB);
+    printf("Densidade Populacional: %.2f hab/km² \n", densidadepopB);
+    printf("PIB per Capita: %.2f reais \n", PIBpercapitaB);
     printf("------------------------------\n");
 
     return 0;
