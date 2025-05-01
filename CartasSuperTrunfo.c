@@ -92,7 +92,7 @@ int main() {
     scanf("%d", &pontosturisticoB);
     printf("                               \n");
 
-    // Mesmo processo para descubrir a densidade populacional e PIB per capita da cidade 1 será feito nesta
+    // Mesmo processo para descobrir a densidade populacional e PIB per capita da cidade 1 será feito nesta
 
     densidadepopB = (float) populacaoB / areaB;
     PIBpercapitaB = pibB / (float) populacaoB;
