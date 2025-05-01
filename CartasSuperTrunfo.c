@@ -11,7 +11,8 @@ int main() {
     // Na população é digitado um número inteiro, logo, colocamos o "int" para atribuir a variável este atributo, depois colocamos os nomes das variável separadas com vírgula
     // Já o PIB e área é um ponto fluante, números que podem ser decimais, assim, "float" faz está definição antes de digitar os nomes das variáveis.
     
-    char estB, estadoA, codeB[3], codigoA[3], nomedacidadeB[30], nomedacidadeA[30];   
+    char estB, estadoA;
+    char codeB[3], codigoA[3], nomedacidadeB[30], nomedacidadeA[30];   
     int populacaoA, pontosturisticoA, populacaoB, pontosturisticoB;  
     float areaA, pibA, areaB, pibB;
 
