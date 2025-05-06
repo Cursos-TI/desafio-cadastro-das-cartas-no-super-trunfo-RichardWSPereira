@@ -11,7 +11,7 @@ int main() {
     // Na população é digitado um número inteiro, logo, colocamos o "int" para atribuir a variável este atributo, depois colocamos os nomes das variável separadas com vírgula
     // Já o PIB e área é um ponto fluante, números que podem ser decimais, assim, "float" faz está definição antes de digitar os nomes das variáveis.
     
-    char estB = "Z", estadoA = "z";
+    char estB, estadoA;
     char codeB[3] = "Cod", codigoA[3] = "CoB", nomedacidadeB[30] = "nomeA", nomedacidadeA[30] = "nomeB";   
     unsigned long int populacaoA = 0,populacaoB = 0;
     int pontosturisticoA = 0,  pontosturisticoB = 0;  
@@ -42,11 +42,11 @@ int main() {
     printf("Qual é a letra que representa este estado: ");
     scanf("%c",&estadoA);
     printf("Qual é o código da cidade do estado %c: ", estadoA);
-    scanf("%s",&codigoA);
+    scanf("%s",codigoA);
     printf("Qual o nome da cidade: ");
-    scanf("%s",&nomedacidadeA);
+    scanf("%s",nomedacidadeA);
     printf("Qual é o número de habitantes: ");
-    scanf("%d",&populacaoA);
+    scanf("%lu",&populacaoA);
     printf("Qual é a área em km2: ");
     scanf("%f",&areaA);
     printf("Quantos bilhões tem o pib desta cidade: ");
@@ -72,7 +72,7 @@ int main() {
     printf("Estado: %c \n",estadoA);
     printf("Código: %s \n", codigoA);
     printf("Nome da Cidade: %s \n", nomedacidadeA);
-    printf("População: %d \n", populacaoA);
+    printf("População: %lu \n", populacaoA);
     printf("Área: %.1f km2 \n", areaA);
     printf("PIB: %.1f bilhões de reais \n", pibA);
     printf("Número de Pontos Turísticos: %d \n", pontosturisticoA);
@@ -91,11 +91,11 @@ int main() {
     printf("Qual é a letra que representa este novo estado: "); 
     scanf("%s",&estB);
     printf("Qual é o código da cidade do estado %c: ",estB);
-    scanf("%s",&codeB);
+    scanf("%s",codeB);
     printf("Qual o nome da cidade: ");
-    scanf("%s",&nomedacidadeB);
+    scanf("%s",nomedacidadeB);
     printf("Qual é o número de habitantes: ");
-    scanf("%d",&populacaoB);
+    scanf("%lu",&populacaoB);
     printf("Qual é a área em km2: ");
     scanf("%f",&areaB);
     printf("Quantos bilhões tem o pib desta cidade: ");
@@ -114,14 +114,33 @@ int main() {
     printf("Estado: %c \n", estB);
     printf("Código: %s \n", codeB);
     printf("Nome da Cidade: %s \n", nomedacidadeB);
-    printf("População: %d \n", populacaoB);
+    printf("População: %lu \n", populacaoB);
     printf("Área: %.1f km2 \n", areaB);
     printf("PIB: %.1f bilhões de reais \n", pibB);
     printf("Número de Pontos Turísticos: %d \n", pontosturisticoB);
     printf("Densidade Populacional: %.2f hab/km² \n", densidadepopB);
     printf("PIB per Capita: %.2f reais \n", PIBpercapitaB);
     printf("O valor do Super Poder é: %.2f \n", SuperPoderB);
-    printf("------------------------------\n");
+    printf("---------------------------------------\n");
+    printf("                               \n");
+
+    // Agora vamos realizar as comparações dos atributos carta por carta
+    // Dessa forma, usando os operadores relacionais, receberei como resultado o valor 0 para falso, quando algum atributo não é maior que o outro e resultado 1 para verdadeiro
+    
+    printf("--------- Comparação de cartas --------\n");
+    printf("=> 1 = verdadeiro \n");
+    printf("=> 0 = falso \n");
+    printf("                               \n");
+    printf("População da carta 1 é maior que o da carta 2: %d \n", populacaoA > populacaoB);
+    printf("Área da carta 1 é maior que o da carta 2: %d \n", areaA > areaB);
+    printf("PIB da carta 1 é maior que o da carta 2: %d \n", pibA > pibB);
+    printf("Números de Pontos Turísticos da carta 1 é maior que o da carta 2: %d \n", pontosturisticoA > pontosturisticoB);
+    printf("Densidade Populacional da carta 1 é menor que o da carta 2: %d \n", densidadepopA < densidadepopB);
+    printf("PIB Per Capitada carta 1 é maior que o da carta 2: %d \n", PIBpercapitaA > PIBpercapitaB);
+    printf("Super Poder da carta 1 é maior que o da carta 2: %d \n", SuperPoderA > SuperPoderB);
+
+    
+
 
     return 0;
 }
